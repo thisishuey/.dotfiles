@@ -11,7 +11,12 @@ call plug#begin(data_dir . '/plugged')
   Plug 'chriskempson/base16-vim'
   Plug 'edkolev/promptline.vim'
   Plug 'edkolev/tmuxline.vim'
-  Plug 'ryanoasis/vim-devicons'
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-telescope/telescope-fzy-native.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
@@ -20,4 +25,5 @@ call plug#end()
 source $HOME/.dotfiles/nvim/plugins/chriskempson/base16-vim.vim
 source $HOME/.dotfiles/nvim/plugins/edkolev/promptline.vim
 source $HOME/.dotfiles/nvim/plugins/edkolev/tmuxline.vim
+source $HOME/.dotfiles/nvim/plugins/nvim-telescope/telescope.vim
 source $HOME/.dotfiles/nvim/plugins/vim-airline/vim-airline.vim
