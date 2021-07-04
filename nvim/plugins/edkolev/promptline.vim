@@ -9,4 +9,4 @@ let g:promptline_preset = {
   \ }
 \ }
 
-let g:promptline_theme = "airline"
+let g:promptline_theme = "airline_insert"
