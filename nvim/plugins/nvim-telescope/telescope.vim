@@ -1,4 +1,4 @@
 lua require('telescope')
 
-nnoremap <C-P> :Telescope find_files<CR>
-nnoremap <C-F> :Telescope grep_string<CR>
+nnoremap <silent> <C-P> :lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<CR>
+nnoremap <silent> <C-F> :lua require('telescope.builtin').live_grep()<CR>
