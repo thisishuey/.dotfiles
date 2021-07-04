@@ -1,0 +1,4 @@
+let base16colorspace = 256
+if !exists('g:colors_name') || g:colors_name != 'base16-classic-dark'
+  colorscheme base16-classic-dark
+endif
