@@ -1,4 +1,5 @@
-source $HOME/.dotfiles/zsh/promptline.sh
+source $HOME/.config/zsh/promptline_vi_mode.sh
+source $HOME/.config/zsh/promptline.sh
 source /usr/local/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
