@@ -3,8 +3,12 @@ source /usr/local/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
+antigen bundle b4b4r07/enhancd
+antigen bundle bobthecow/git-flow-completion
 antigen bundle git
+antigen bundle vi-mode
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen apply
