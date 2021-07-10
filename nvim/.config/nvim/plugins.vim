@@ -22,8 +22,8 @@ call plug#begin(data_dir . '/plugged')
 
 call plug#end()
 
-source $HOME/.dotfiles/nvim/plugins/chriskempson/base16-vim.vim
-source $HOME/.dotfiles/nvim/plugins/edkolev/promptline.vim
-source $HOME/.dotfiles/nvim/plugins/edkolev/tmuxline.vim
-source $HOME/.dotfiles/nvim/plugins/nvim-telescope/telescope.vim
-source $HOME/.dotfiles/nvim/plugins/vim-airline/vim-airline.vim
+source $HOME/.config/nvim/plugins/chriskempson/base16-vim.vim
+source $HOME/.config/nvim/plugins/edkolev/promptline.vim
+source $HOME/.config/nvim/plugins/edkolev/tmuxline.vim
+source $HOME/.config/nvim/plugins/nvim-telescope/telescope.vim
+source $HOME/.config/nvim/plugins/vim-airline/vim-airline.vim
