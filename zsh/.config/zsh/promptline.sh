@@ -12,11 +12,7 @@ function __promptline_ps1 {
   local slice_prefix slice_empty_prefix slice_joiner slice_suffix is_prompt_empty=1
 
   # section "a" header
-  if [ $vi_mode = $vi_mode_ins ]; then
-    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
-  else
-    slice_prefix="${alt_a_bg}${sep}${alt_a_fg}${alt_a_bg}${space}" slice_suffix="$space${alt_a_sep_fg}" slice_joiner="${alt_a_fg}${alt_a_bg}${alt_sep}${space}" slice_empty_prefix="${alt_a_fg}${alt_a_bg}${space}"
-  fi
+  slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "a" slices
   __promptline_wrapper "$(if [[ -n ${ZSH_VERSION-} ]]; then print %n; elif [[ -n ${FISH_VERSION-} ]]; then printf "%s" "$USER"; else printf "%s" \\u; fi )" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
@@ -91,11 +87,7 @@ function __promptline_left_prompt {
   local slice_prefix slice_empty_prefix slice_joiner slice_suffix is_prompt_empty=1
 
   # section "a" header
-  if [ $vi_mode = $vi_mode_ins ]; then
-    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
-  else
-    slice_prefix="${alt_a_bg}${sep}${alt_a_fg}${alt_a_bg}${space}" slice_suffix="$space${alt_a_sep_fg}" slice_joiner="${alt_a_fg}${alt_a_bg}${alt_sep}${space}" slice_empty_prefix="${alt_a_fg}${alt_a_bg}${space}"
-  fi
+  slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "a" slices
   __promptline_wrapper "$(if [[ -n ${ZSH_VERSION-} ]]; then print %n; elif [[ -n ${FISH_VERSION-} ]]; then printf "%s" "$USER"; else printf "%s" \\u; fi )" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
@@ -151,7 +143,7 @@ function __promptline_git_status {
 
   while read line; do
     case "$line" in
-
+      *) added_count=$(( $added_count + 1 )) ;;
     esac
   done < <(git diff --name-status --cached)
 
@@ -200,12 +192,6 @@ function __promptline {
   local b_fg="${wrap}38;5;2${end_wrap}"
   local b_bg="${wrap}48;5;0${end_wrap}"
   local b_sep_fg="${wrap}38;5;0${end_wrap}"
-  local alt_a_fg="${wrap}38;5;18${end_wrap}"
-  local alt_a_bg="${wrap}48;5;4${end_wrap}"
-  local alt_a_sep_fg="${wrap}38;5;4${end_wrap}"
-  local alt_b_fg="${wrap}38;5;7${end_wrap}"
-  local alt_b_bg="${wrap}48;5;19${end_wrap}"
-  local alt_b_sep_fg="${wrap}38;5;19${end_wrap}"
   local c_fg="${wrap}38;5;7${end_wrap}"
   local c_bg="${wrap}48;5;18${end_wrap}"
   local c_sep_fg="${wrap}38;5;18${end_wrap}"
