@@ -1,5 +1,6 @@
 source $HOME/.config/zsh/promptline.sh
 source /usr/local/share/antigen/antigen.zsh
+source /usr/local/opt/asdf/asdf.sh
 
 antigen use oh-my-zsh
 
