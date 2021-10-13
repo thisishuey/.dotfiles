@@ -12,7 +12,6 @@ set noshowmode
 set noswapfile
 set nowrap
 set number
-set relativenumber
 set scrolloff=8
 set signcolumn=yes
 set smartcase
