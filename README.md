@@ -1,1 +1,6 @@
 # .dotfiles
+
+## Symlinking
+
+`stow tmux`
+

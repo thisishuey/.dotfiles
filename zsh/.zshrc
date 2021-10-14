@@ -24,3 +24,4 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
   eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 export PATH="$HOME/.asdf/shims:$PATH"
+export PATH="/usr/local/sbin:$PATH"
