@@ -9,14 +9,19 @@ endif
 call plug#begin(data_dir . '/plugged')
 
   Plug 'chriskempson/base16-vim'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'editorconfig/editorconfig-vim'
   Plug 'edkolev/promptline.vim'
   Plug 'edkolev/tmuxline.vim'
   Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'mhinz/vim-startify'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'raimondi/delimitmate'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-dadbod'
   Plug 'tpope/vim-fugitive'
@@ -33,6 +38,9 @@ call plug#end()
 source $HOME/.config/nvim/plugins/chriskempson/base16-vim.vim
 source $HOME/.config/nvim/plugins/edkolev/promptline.vim
 source $HOME/.config/nvim/plugins/edkolev/tmuxline.vim
+source $HOME/.config/nvim/plugins/mhinz/vim-startify.vim
+source $HOME/.config/nvim/plugins/neoclide/coc.vim
 source $HOME/.config/nvim/plugins/nvim-telescope/telescope.vim
-source $HOME/.config/nvim/plugins/vim-airline/vim-airline.vim
+source $HOME/.config/nvim/plugins/raimondi/delimitmate.vim
 source $HOME/.config/nvim/plugins/tpope/vim-vinegar.vim
+source $HOME/.config/nvim/plugins/vim-airline/vim-airline.vim
